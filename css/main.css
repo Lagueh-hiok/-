@@ -8,6 +8,7 @@
 	font-family: 'Noto Sans JP', sans-serif;
 	color: #000;
 	font-weight: 400;
+	user-select: none;
 }
 /*RWD*/
 @media screen and (max-width: 750px){
@@ -60,12 +61,10 @@ h3{
 	justify-content: center;
 	align-items: center;
 }
-.img{
-	/*overflow: hidden;*/
-}
 .bgs{
 	width: 100%;
-	height: 100vh;
+	height: 70vh;
+	z-index: -1;
 	/*overflow: hidden;*/
 	position: relative;
 }
@@ -281,7 +280,7 @@ h3{
 	width: 400px;
 	padding: 10px;
 	color: #fff;
-	animation: marquee 10s linear infinite;
+	animation: marquee 10s infinite linear;
 }
 @keyframes marquee{
 	0%{
@@ -577,7 +576,7 @@ h3{
 			align-items: center;
 	position: fixed;
 	background-color: #0008;
-	z-index: 1;
+	z-index: 20;
 	
   }
   
@@ -661,6 +660,7 @@ h3{
 	margin: 20px;
 	font-size: 40px;
 	transition:.3s;
+	cursor: pointer;
   }   
   .portfolio .content .Details .txt .x:hover {
 	color:var(--gold);
@@ -755,6 +755,42 @@ h3{
   
 
 
+
+  @-webkit-keyframes tram {
+	0% {
+	  -webkit-transform: translateX(-100%);
+			  transform: translateX(-100%);
+	}
+	100% {
+	  -webkit-transform: translateX(125%);
+			  transform: translateX(125%);
+	}
+  }
+  
+  @keyframes tram {
+	0% {
+	  -webkit-transform: translateX(-100%);
+			  transform: translateX(-100%);
+	}
+	100% {
+	  -webkit-transform: translateX(125%);
+			  transform: translateX(125%);
+	}
+  }
+  .bgs #scroll09 {
+	height: 70px;
+	overflow: hidden;
+	bottom: 21.5%;
+  }
+  
+  .bgs #scroll09 img {
+	height: 50px;
+	-webkit-transform: translateX(-100%);
+			transform: translateX(-100%);
+	-webkit-animation: tram 25s infinite cubic-bezier(0.22, 0.87, 0.24, -0.13);
+			animation: tram 25s infinite cubic-bezier(0.22, 0.87, 0.24, -0.13);
+  }
+  
 
 
 

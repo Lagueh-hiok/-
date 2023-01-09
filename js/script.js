@@ -26,18 +26,18 @@
        //        };
        // });
 // 視覺差 新版   
-       let layers = document.querySelectorAll(".scroll-layers");
-       let speed;
-       let yPos;
-       window.addEventListener("scroll",(e) => {
-              let formTop = this.pageYOffset;
+       // let layers = document.querySelectorAll(".scroll-layers");
+       // let speed;
+       // let yPos;
+       // window.addEventListener("scroll",(e) => {
+       //        let formTop = this.pageYOffset;
 
-              for(let layer of layers){
-                     speed = layer.getAttribute('speed');
-                     yPos = -(formTop * speed) * 0.01;
-                     layer.style.transform = `translateY(${yPos}px)`;
-              }
-       });
+       //        for(let layer of layers){
+       //               speed = layer.getAttribute('speed');
+       //               yPos = -(formTop * speed) * 0.01;
+       //               layer.style.transform = `translateY(${yPos}px)`;
+       //        }
+       // });
 
 // 按鈕  
        const submit = document.getElementById("submit");
@@ -117,7 +117,7 @@ x.addEventListener("click", () =>{
               pt.style.aninationFillMode = "forwards";
               setTimeout(() =>{
                      Details.style.display = "none";
-                 },00);
+                 },500);
 });
 Details.addEventListener("click", () =>{
        pt.style.animationName = 'slideUp';
